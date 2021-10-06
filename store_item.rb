@@ -10,10 +10,10 @@ class Store
   attr_reader :color, :price, :quantity
   attr_writer :price, :quantity
 
-  def initialize(color, price, amount)
-    @color = color
-    @price = price
-    @amount = amount
+  def initialize(options_hash)
+    @color = options_hash[:color]
+    @price = options_hash[:price]
+    @quantity = options_hash[:quantity]
   end
 end
 
@@ -38,7 +38,7 @@ end
 #   end
 # end
 
-candy1 = Store.new("orange, white, & yellow", 6, 30)
+candy1 = Store.new({ color: "orange, white, & yellow", price: 6, quantity: 30 })
 
 puts candy1.color
 puts candy1.price
