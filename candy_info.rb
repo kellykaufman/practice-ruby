@@ -1,6 +1,4 @@
-require "./candy_info.rb"
-
-class Store
+module candy_info
   attr_reader :color, :price, :quantity
   attr_writer :price, :quantity
 
@@ -9,6 +7,7 @@ class Store
     @price = options_hash[:price]
     @quantity = options_hash[:quantity]
   end
+  
+  
+
 end
-
-
