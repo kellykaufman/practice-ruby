@@ -38,10 +38,14 @@ class Manager < Employee
   def give_all_raises
     i = 0
     while i < @employees.length
+      puts 10
+      i += 1
     end
   end
 end
 
-manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000, active: true, employees: [employee1, employee2])
+manager = Manager.new({ first_name: "Saron", last_name: "Yitbarek", salary: 100000, active: true, employees: [employee1, employee2] })
 manager.print_info
 manager.send_report
+
+puts manager.give_all_raises
