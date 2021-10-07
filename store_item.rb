@@ -10,5 +10,3 @@ class Store
     @quantity = options_hash[:quantity]
   end
 end
-
-
